@@ -1,0 +1,177 @@
+@theme-color: #d33a31;
+@theme-background-color:#f5f5f5;
+@header-height:50px;
+ul{
+  list-style-type: none;
+}
+.iconfont{
+  font-size:18px;
+  vertical-align: -4px;
+  margin-right:8px;
+}
+a{
+  color:rgba(0,0,0,.65);
+}
+.f-thide{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: normal;
+}
+.ant-layout-header{
+  background: @theme-color;
+}
+
+.wrapper{
+  height: calc(100vh - @header-height);
+}
+.header{
+  height: @header-height;
+  line-height: @header-height;
+}
+.logo{
+  width:130px;
+  height:25px;
+  vertical-align: -5px;
+}
+.menu-list{
+  padding:16px 0;
+  li{
+    height:40px;
+    line-height:40px;
+    font-weight: 600;
+    a{
+      padding:0 0 0 40px;
+      display: block;
+      position: relative;
+      &.active{
+        background:#e5e8ea;
+        color:#e06358;
+        &:before{
+          content:'';
+          position: absolute;
+          left:0;
+          top:0;
+          bottom:0;
+          width: 3px;
+          background:@theme-color;
+        }
+      }
+    }
+    
+  }
+}
+.main-content{
+  max-width: 1200px;
+  margin:0 auto;
+}
+.main-content-wrap{
+  margin-top:16px;
+}
+.section-wrap{
+  margin:16px 0;
+}
+// .ant-carousel .slick-slide {
+//   text-align: center;
+//   height: 160px;
+//   line-height: 160px;
+//   background: #364d79;
+//   overflow: hidden;
+// }
+.slick-list{
+  .slick-slide{
+    z-index: 1;
+    .carousel-wrap{
+      transition: all .2s;
+      transform: scale(.9);
+      transform-origin: 50% 50%;
+    }
+  }
+  .slick-center{
+    z-index: 2;
+    .carousel-wrap{
+      transform: scale(1);
+    }
+  }
+  
+}
+.ant-carousel{
+  margin:16px;
+  .center{
+    .slick-arrow{
+      z-index: 9999;
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+    }
+    .next-arrow{
+      right: 0;
+    }
+  }
+}
+.ant-carousel .slick-prev{
+  left:25px;
+}
+.ant-carousel .center .slick-dots li button{
+  opacity: 1;
+  background:#c0c4cc;
+}
+.ant-carousel .center .slick-dots li.slick-active button{
+  background: @theme-color;
+}
+.carousel-wrap{
+  width:50%;
+  img{
+    width:100%;
+    height:100%;
+  }
+}
+.playlist{
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 -8px;
+  .playlist-card{
+    width: calc(20% - 16px);
+    margin: 0 8px;
+  }
+}
+.list-wrap{
+  display: flex;
+  .list{
+    flex:1;
+    .ant-list-item{
+      cursor: pointer;
+      .item-number{
+        width:35px;
+        font-size:16px;
+        text-align: center;
+      }
+      &:hover{
+        background:@theme-background-color;
+      }
+    }
+    .ant-list-item-meta{
+      align-items: center;
+      .ant-list-item-meta-avatar{
+        .ant-avatar-image{
+          width:60px;
+          height:60px;
+        }
+      }
+    }
+    
+  }
+}
+.player{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  display: flex;
+  height:60px;
+  background:#f6f6f7;
+  border-top:1px solid #e0e0e0;
+  align-items: center;
+  .player-control{
+    padding:0 24px;
+  }
+}
