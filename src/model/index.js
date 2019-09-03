@@ -1,1 +1,1 @@
-import { pad } from '../utils/index'
+import { format } from '../utils/index'
