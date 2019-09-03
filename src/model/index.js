@@ -1,1 +1,1 @@
-import { format } from '../utils/index'
+import { format } from '../utils/index';
