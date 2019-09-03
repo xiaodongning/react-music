@@ -14,3 +14,11 @@ export function getNewSong() {
     url:'/personalized/newsong'
   })
 }
+
+export function getMusicUrl(params) { 
+  return request({
+    method: 'get',
+    url: '/music/url',
+    params
+  })
+}

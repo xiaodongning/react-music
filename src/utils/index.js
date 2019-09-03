@@ -13,3 +13,9 @@ export function pad(val) {
     return val;
   }
 }
+export function format(time) {
+  time = time | 0
+  const minute = time / 60 | 0
+  const second = pad(time % 60)
+  return `${minute}:${second}`
+}
